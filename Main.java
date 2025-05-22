@@ -1,10 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-        Arvore minhaArvore = new Arvore();
 
-        minhaArvore.inserir(10);
-        minhaArvore.inserir(5);
-        minhaArvore.inserir(15);
-        minhaArvore.inserir(3);
+        Arvore arvore = new Arvore();
+        arvore.inserir(1);
+        arvore.inserir(2);
+        arvore.inserir(3);
+        arvore.inserir(4);
+        arvore.inserir(5);
+        arvore.inserir(6);
+        arvore.inserir(7);
+
+        System.out.println("Pré-Ordem:");
+        arvore.percorrerPreOrdem(arvore.raiz);
+        
     }
+
 }
