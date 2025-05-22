@@ -37,18 +37,22 @@ public class Arvore {
             System.out.print(node.valor + " ");
             preOrdem (node.esquerda);
             preOrdem (node.direita);
-        
         }
     }
 
     public void emOrdem(No node) {
-
         if (node != null) {
             emOrdem(node.esquerda);
             System.out.print(node.valor + " ");
             emOrdem (node.direita);
-
         }
     }
 
+    public void posOrdem (No node) {
+        if (node != null) {
+            posOrdem(node.esquerda);
+            posOrdem(node.direita);
+            System.out.print(node.valor + " ");
+        }
+    }
 }

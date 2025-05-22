@@ -10,12 +10,19 @@ public class Main {
         arvore.inserir(6);
         arvore.inserir(7);
 
-        System.out.println("Pre-Ordem:");
+        System.out.print("Pré-Ordem:");
         arvore.preOrdem(arvore.raiz);
 
-        System.out.println("Em-Ordem:");
+        System.out.println("");
+
+        System.out.print("Em-Ordem:");
         arvore.emOrdem(arvore.raiz);
-        
+
+        System.out.println("");
+
+        System.out.print("Pos-Ordem:");
+        arvore.posOrdem(arvore.raiz);
+
     }
 
 }
