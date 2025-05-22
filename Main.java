@@ -10,8 +10,11 @@ public class Main {
         arvore.inserir(6);
         arvore.inserir(7);
 
-        System.out.println("Pré-Ordem:");
+        System.out.println("Pre-Ordem:");
         arvore.preOrdem(arvore.raiz);
+
+        System.out.println("Em-Ordem:");
+        arvore.emOrdem(arvore.raiz);
         
     }
 

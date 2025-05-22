@@ -39,7 +39,16 @@ public class Arvore {
             preOrdem (node.direita);
         
         }
+    }
 
+    public void emOrdem(No node) {
+
+        if (node != null) {
+            emOrdem(node.esquerda);
+            System.out.print(node.valor + " ");
+            emOrdem (node.direita);
+
+        }
     }
 
 }
