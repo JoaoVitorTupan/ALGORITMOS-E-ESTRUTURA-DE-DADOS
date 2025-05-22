@@ -32,11 +32,14 @@ public class Arvore {
         }
     }
 
-    public void percorrerPreOrdem(No no) {
-        if (no != null) {
-            System.out.print(no.valor + " ");
-            percorrerPreOrdem(no.esquerda);
-            percorrerPreOrdem(no.direita);
+    public void preOrdem (No node) { 
+        if (node != null) {
+            System.out.print(node.valor + " ");
+            preOrdem (node.esquerda);
+            preOrdem (node.direita);
+        
         }
+
     }
+
 }

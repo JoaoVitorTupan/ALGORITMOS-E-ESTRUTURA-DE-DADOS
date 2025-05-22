@@ -11,7 +11,7 @@ public class Main {
         arvore.inserir(7);
 
         System.out.println("Pré-Ordem:");
-        arvore.percorrerPreOrdem(arvore.raiz);
+        arvore.preOrdem(arvore.raiz);
         
     }
 
