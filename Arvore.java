@@ -61,4 +61,13 @@ public class Arvore {
         }
     }
 
+    public int contarFolhas(No no) {
+    if (no == null) return 0;
+
+    if (no.esquerda == null && no.direita == null)
+        return 1;
+
+    return contarFolhas(no.esquerda) + contarFolhas(no.direita);
+    }
+
 }
