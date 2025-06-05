@@ -15,6 +15,7 @@ class No {
     return no.altura;
     }
 
+
     public No rotacaoDireita(No y) {
     No x = y.esquerda;
     No T2 = x.direita;
@@ -32,17 +33,27 @@ public No rotacaoEsquerda(No x) {
     }
 
     public No balancear(No no) {
-    int balance = altura(no.esquerda) - altura(no.direita);
+        int balance = altura(no.esquerda) - altura(no.direita);
 
-    if (balance > 1 && altura(no.esquerda.esquerda) >= altura(no.esquerda.direita)) {
-        return rotacaoDireita(no);
-    }
+        if (balance > 1 && altura(no.esquerda.esquerda) >= altura(no.esquerda.direita)) {
+            return rotacaoDireita(no);
+        }
 
-    if (balance < -1 && altura(no.direita.direita) >= altura(no.direita.esquerda)) {
-        return rotacaoEsquerda(no);
-    }
+        if (balance > 1 && altura(no.esquerda.direita) > altura(no.esquerda.esquerda)) {
+            no.esquerda = rotacaoEsquerda(no.esquerda);
+            return rotacaoDireita(no);
+        }
 
-    return no;
+        if (balance < -1 && altura(no.direita.direita) >= altura(no.direita.esquerda)) {
+            return rotacaoEsquerda(no);
+        }
+
+        if (balance < -1 && altura(no.direita.esquerda) > altura(no.direita.direita)) {
+            no.direita = rotacaoDireita(no.direita);
+            return rotacaoEsquerda(no);
+        }
+
+        return no;
     }
 
 }
